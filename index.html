@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="SPY-E & 123Tool">
+    <meta name="description" content="Premium Meme Generator - Create, customize, and download high-quality memes instantly.">
+    <title>Meme Studio Pro Pro | SPY-E & 123Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Impact&family=Oswald:wght@700&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand">
+                <i class="fa-solid fa-face-laugh-squint logo-icon"></i>
+                <div class="brand-text">
+                    <h1>MemeStudio<span>Pro</span></h1>
+                    <span class="sub-brand">Engineered by SPY-E & 123Tool</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="btnReset" class="btn btn-secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                <button id="btnDownload" class="btn btn-primary"><i class="fa-solid fa-download"></i> Export Meme</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="workspace-canvas">
+            <div class="canvas-wrapper">
+                <canvas id="memeCanvas" width="800" height="800"></canvas>
+                <div id="dropZone" class="drop-zone hidden">
+                    <i class="fa-solid fa-cloud-arrow-up drop-icon"></i>
+                    <p>Drag & Drop Image Here or Click to Browse</p>
+                </div>
+            </div>
+            <div class="canvas-hints">
+                <p><i class="fa-solid fa-circle-info"></i> Pro-tip: Click and drag text directly on the canvas to reposition.</p>
+            </div>
+        </section>
+
+        <aside class="workspace-sidebar">
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" data-tab="media"><i class="fa-solid fa-images"></i> Media</button>
+                <button class="tab-btn" data-tab="text"><i class="fa-solid fa-font"></i> Typography</button>
+                <button class="tab-btn" data-tab="filters"><i class="fa-solid fa-sliders"></i> Adjustments</button>
+            </div>
+
+            <div class="tab-content-wrapper">
+                <div class="tab-content active" id="tab-media">
+                    <div class="control-group">
+                        <label class="group-title">Source Image</label>
+                        <div class="upload-box">
+                            <input type="file" id="imageLoader" accept="image/*" class="file-input">
+                            <label for="imageLoader" class="upload-label">
+                                <i class="fa-solid fa-file-image"></i> Upload Custom Image
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="group-title">Popular Templates</label>
+                        <div class="template-grid" id="templateGrid">
+                            </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-text">
+                    <div class="control-group">
+                        <button id="btnAddText" class="btn btn-accent btn-full">
+                            <i class="fa-solid fa-plus"></i> Add New Text Layer
+                        </button>
+                    </div>
+
+                    <div class="layers-container" id="layersContainer">
+                        </div>
+                </div>
+
+                <div class="tab-content" id="tab-filters">
+                    <div class="control-group">
+                        <label class="group-title">Image Filters</label>
+                        
+                        <div class="slider-row">
+                            <span class="slider-label">Brightness</span>
+                            <input type="range" id="filter-brightness" min="50" max="150" value="100" class="slider">
+                        </div>
+
+                        <div class="slider-row">
+                            <span class="slider-label">Contrast</span>
+                            <input type="range" id="filter-contrast" min="50" max="150" value="100" class="slider">
+                        </div>
+
+                        <div class="slider-row">
+                            <span class="slider-label">Grayscale</span>
+                            <input type="range" id="filter-grayscale" min="0" max="100" value="0" class="slider">
+                        </div>
+                        
+                        <div class="slider-row">
+                            <span class="slider-label">Sepia</span>
+                            <input type="range" id="filter-sepia" min="0" max="100" value="0" class="slider">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="group-title">Brand Protection</label>
+                        <div class="checkbox-row">
+                            <input type="checkbox" id="toggleWatermark" checked>
+                            <label for="toggleWatermark">Include Credits Watermark</label>
+                        </div>
+                        <p class="input-hint">Adds a discrete, professional "MemeStudioPro" watermark at the bottom right corner.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 MemeStudioPro Framework v2.1.0 • Developed by <strong>SPY-E & 123Tool</strong>. Ready for enterprise integration.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
