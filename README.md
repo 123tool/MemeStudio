@@ -1,6 +1,6 @@
 ## MemeStudio — Meme Generation
 
-MemeStudioPro is a high-performance, single-page standalone web utility engineered with high-efficiency vanilla ES6+ Javascript and standard HTML5 Canvas API. Optimized specifically for rapid deployment across embedded architectures like Google Blogger, GitHub Pages, static storage buckets, or decoupled enterprise infrastructure setups.
+MemeStudio is a high-performance, single-page standalone web utility engineered with high-efficiency vanilla ES6+ Javascript and standard HTML5 Canvas API. Optimized specifically for rapid deployment across embedded architectures like Google Blogger, GitHub Pages, static storage buckets, or decoupled enterprise infrastructure setups.
 
 ## 🌟 Key Functional Features
 * **Infinite Multi-Layer Typography:** Supports adding unlimited dynamic text elements.
